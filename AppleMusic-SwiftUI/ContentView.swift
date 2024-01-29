@@ -14,18 +14,20 @@ struct ContentView: View {
             .tabItem {
                 Image(systemName: "play.square.stack")
                 Text("Медиатека")
+
             }
-            Text("OLOLOL")
+            Text("Radio")
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
                 }
-            Text("LOLOLO")
+            Text("Search")
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Поиск")
                 }
         }
+        .tint(.red)
     }
 }
 
