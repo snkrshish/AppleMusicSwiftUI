@@ -9,25 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            LibraryView()
-            .tabItem {
-                Image(systemName: "play.square.stack")
-                Text("Медиатека")
 
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+            TabView {
+                LibraryView()
+                    .tabItem {
+                        Image(systemName: "play.square.stack")
+                        Text("Медиатека")
+
+                    }
+                Text("Radio")
+                    .tabItem {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
+                Text("Search")
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
             }
-            Text("Radio")
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
-            Text("Search")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
+            .tint(.red)
+            PlayerWindow()
         }
-        .tint(.red)
     }
 }
 
