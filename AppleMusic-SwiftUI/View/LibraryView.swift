@@ -8,28 +8,30 @@
 import SwiftUI
 
 struct LibraryView: View {
+
+    @State var editMode = true
+    @State var labelText = "Править"
+
     var body: some View {
+
         NavigationView(content: {
             VStack {
-                VStack {
-                    Text("Ищете свою музыку?")
-                        .bold()
-                        .font(.title)
-                    Text("Здесь появится купленная Вами в iTunes Store музыка ")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.center)
+                ZStack {
+                    MyPlaylistView()
+                        .opacity(editMode ? 1 : 0)
+                    ListOfGanreView()
+                        .opacity(!editMode ? 1 : 0)
                 }
-                .padding()
-                .navigationTitle("Медиатека")
-                .toolbar(content: {
-                    NavigationLink {
-                        EditTable()
-                    } label: {
-                        Text("Править")
-                            .foregroundStyle(.red)
+                    .navigationTitle("Медиатека")
+                    .toolbar {
+                        Button {
+                            labelText = editMode ? "Готово" : "Править"
+                            editMode.toggle()
+                        } label: {
+                            Text(labelText)
+                                .tint(.red)
+                        }
                     }
-                })
             }
         })
     }

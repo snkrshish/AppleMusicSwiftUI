@@ -29,6 +29,9 @@ struct ContentView: View {
                         Text("Поиск")
                     }
             }
+            .onAppear() {
+                UITabBar.appearance().backgroundColor = .systemGray6
+            }
             .tint(.red)
             PlayerWindow()
         }
