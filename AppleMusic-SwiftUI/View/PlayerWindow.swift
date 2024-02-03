@@ -37,7 +37,7 @@ struct PlayerWindow: View {
             Divider()
                 
         }
-        .offset(y: -50)
+        .offset(y: -47)
     }
 }
 
