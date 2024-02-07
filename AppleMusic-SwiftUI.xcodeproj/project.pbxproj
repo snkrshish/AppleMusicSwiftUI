@@ -16,6 +16,8 @@
 		4420E6832B6DD9BF006A21F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4420E6822B6DD9BF006A21F6 /* Images.xcassets */; };
 		4420E6852B6DF389006A21F6 /* FirstCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4420E6842B6DF389006A21F6 /* FirstCollectionView.swift */; };
 		4420E6872B6E1130006A21F6 /* SecondCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4420E6862B6E1130006A21F6 /* SecondCollectionView.swift */; };
+		4420E68A2B7235C6006A21F6 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4420E6892B7235C6006A21F6 /* SearchScreen.swift */; };
+		4420E68C2B723607006A21F6 /* AlbumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4420E68B2B723607006A21F6 /* AlbumCollection.swift */; };
 		444342802B6754DF007FA665 /* AppleMusic_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4443427F2B6754DF007FA665 /* AppleMusic_SwiftUIApp.swift */; };
 		444342822B6754DF007FA665 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444342812B6754DF007FA665 /* ContentView.swift */; };
 		444342872B6754E0007FA665 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 444342862B6754E0007FA665 /* Preview Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		4420E6822B6DD9BF006A21F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4420E6842B6DF389006A21F6 /* FirstCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionView.swift; sourceTree = "<group>"; };
 		4420E6862B6E1130006A21F6 /* SecondCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionView.swift; sourceTree = "<group>"; };
+		4420E6892B7235C6006A21F6 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		4420E68B2B723607006A21F6 /* AlbumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollection.swift; sourceTree = "<group>"; };
 		4443427C2B6754DF007FA665 /* AppleMusic-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppleMusic-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4443427F2B6754DF007FA665 /* AppleMusic_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusic_SwiftUIApp.swift; sourceTree = "<group>"; };
 		444342812B6754DF007FA665 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 			path = RadioModels;
 			sourceTree = "<group>";
 		};
+		4420E6882B7235B5006A21F6 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4420E6892B7235C6006A21F6 /* SearchScreen.swift */,
+				4420E68B2B723607006A21F6 /* AlbumCollection.swift */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
 		444342732B6754DF007FA665 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 		4443428D2B677C70007FA665 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4420E6882B7235B5006A21F6 /* SearchScreen */,
 				4420E6792B6DCFB3006A21F6 /* MediaLibraryScreen */,
 				4420E67B2B6DCFF8006A21F6 /* RadioScreen */,
 				444342922B67A3C0007FA665 /* PlayerWindow.swift */,
@@ -215,10 +229,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4420E68A2B7235C6006A21F6 /* SearchScreen.swift in Sources */,
 				444342822B6754DF007FA665 /* ContentView.swift in Sources */,
 				4420E67D2B6DD021006A21F6 /* RadioScreen.swift in Sources */,
 				4420E66E2B6B7F5A006A21F6 /* ListOfGanreView.swift in Sources */,
 				4420E6782B6D1150006A21F6 /* MyPlaylistView.swift in Sources */,
+				4420E68C2B723607006A21F6 /* AlbumCollection.swift in Sources */,
 				4420E6762B6D067B006A21F6 /* ObservableClass.swift in Sources */,
 				4443428F2B677CA1007FA665 /* LibraryView.swift in Sources */,
 				444342932B67A3C0007FA665 /* PlayerWindow.swift in Sources */,

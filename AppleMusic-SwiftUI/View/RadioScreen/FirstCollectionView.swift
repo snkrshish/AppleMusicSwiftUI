@@ -10,19 +10,20 @@ import SwiftUI
 struct FirstCollectionView: View {
 
     private let rows = [GridItem(.fixed(320))]
-    private let firstModel = RadioModels.previewFirstCollection()
+    @State private var firstModel = RadioModels.previewFirstCollection
+
 
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             LazyHGrid(rows: rows) {
-                ForEach(firstModel)  { index in
+                ForEach($firstModel)  { $index in
                     VStack(alignment: .leading) {
                         Divider()
-                        Text(index.destination)
+                        Text(index.destination ?? "")
                             .font(.subheadline)
                             .foregroundStyle(.gray)
-                        Text(index.name)
+                        Text(index.name ?? "")
                             .font(.title)
                         Text(index.secondDestination ?? "    ")
                             .font(.title2)

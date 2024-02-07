@@ -2,29 +2,44 @@ import Foundation
 
 struct RadioModels: Identifiable {
     var id = UUID()
-    var name: String
-    var destination: String
+    var name: String?
+    var destination: String?
     var secondDestination: String?
     var image: String
+}
 
-    static func previewFirstCollection() -> [RadioModels] {
+extension RadioModels {
+    static var previewFirstCollection: [RadioModels] = {
         [
             RadioModels(name: "Коллекция Hip-Hop", destination: "эксклюзив", image: "Hip-Hop"),
             RadioModels(name: "Русское радио", destination: "утреннее шоу", image: "RusRadio"),
             RadioModels(name: "Любовная волна", destination: "любим музыку", secondDestination: "новинка", image: "LoveRadio"),
             RadioModels(name: "Заряд бодрости", destination: "музыка для танцев", secondDestination: "современные хиты", image: "RadioRecord")
         ]
-    }
+    }()
 
-    static func previewSecondCollection() -> [RadioModels] {
+    static var previewSecondCollection: [RadioModels] = {
         [
             RadioModels(name: "Музыка для учебы", destination: "Не отвлекайтесь", image: "Музыка для учебы"),
             RadioModels(name: "Зарубежные хиты", destination: "То, что слушают прямо сейччас", image: "Зарубежные Хиты"),
             RadioModels(name: "Музыка для концентрации", destination: "Электронная медитация", image: "Музыка для медитации"),
             RadioModels(name: "Музыка для тренировки", destination: "Музыка для прилива сил", image: "Музыка для тренировки")
         ]
-    }
+    }()
+
+    static var previewCategories: [RadioModels] = {
+        [
+            RadioModels(image: "викенд"),
+            RadioModels(image: "главное"),
+            RadioModels(image: "чарты"),
+            RadioModels(image: "к-поп"),
+            RadioModels(image: "для детей"),
+            RadioModels(image: "сон"),
+            RadioModels(image: "спокойствие"),
+            RadioModels(image: "хиты"),
+            RadioModels(image: "2000"),
+            RadioModels(image: "2010"),
+        ]
+    }()
 }
-
-
 
