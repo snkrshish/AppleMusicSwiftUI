@@ -15,14 +15,17 @@ struct AlbumCollection: View {
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
-            Text("Поиск по категориям")
-                .padding(.trailing, 130)
-                .font(.title2)
+            HStack {
+                Text("Поиск по категориям")
+                    .font(.title2)
                 .bold()
+                Spacer()
+            }
+            .padding(.leading)
 
             LazyVGrid(columns: columns,spacing: 10) {
                 ForEach($model)  { $index in
-                    NavigationLink(destination: RadioScreen()) {
+                    NavigationLink(destination: DetailViewCategory()) {
                             Image(index.image)
                                 .resizable()
                                 .clipShape(RoundedRectangle(cornerRadius: 10))

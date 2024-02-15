@@ -7,18 +7,40 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
-    
-    
-    
+struct SearchScreen: View {
+
+    private let columns = [GridItem(.flexible()),
+                           GridItem(.flexible())]
+    @State private var model = RadioModels.previewCategories
+
     var body: some View {
         NavigationView {
-            AlbumCollection()
-                .navigationTitle("Поиск")
+            ScrollView(.vertical, showsIndicators: false, content: {
+                HStack {
+                    Text("Поиск по категориям")
+                        .font(.title2)
+                        .bold()
+                    Spacer()
+                }
+                .padding(.leading)
+
+                LazyVGrid(columns: columns,spacing: 10) {
+                    ForEach($model)  { $index in
+                        NavigationLink(destination: DetailViewCategory()) {
+                            Image(index.image)
+                                .resizable()
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .frame(width: 175, height: 120)
+                        }
+                    }
+                }
+                .padding()
+            })
+            .navigationTitle("Поиск")
         }
     }
 }
 
 #Preview {
-    SwiftUIView()
+    SearchScreen()
 }
