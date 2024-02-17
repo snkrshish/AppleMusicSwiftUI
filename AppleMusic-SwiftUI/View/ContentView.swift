@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
 
+    @State var expand = false
+    @Namespace var animation
+
+    var body: some View {
+        
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView {
                 LibraryView()
@@ -28,11 +32,8 @@ struct ContentView: View {
                         Text("Поиск")
                     }
             }
-            .onAppear() {
-                UITabBar.appearance().backgroundColor = .systemGray6
-            }
             .tint(.red)
-            PlayerWindow()
+            PlayerWindow(expand: $expand, animation: animation)
         }
     }
 }
