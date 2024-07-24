@@ -8,29 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
 
+    @State var expand = false
+    @Namespace var animation
+
+    var body: some View {
+        
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView {
                 LibraryView()
                     .tabItem {
                         Image(systemName: "play.square.stack")
                         Text("Медиатека")
-
                     }
-                Text("Radio")
+                RadioScreen()
                     .tabItem {
                         Image(systemName: "dot.radiowaves.left.and.right")
                         Text("Радио")
                     }
-                Text("Search")
+                SearchScreen()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Поиск")
                     }
             }
             .tint(.red)
-            PlayerWindow()
+            PlayerWindow(expand: $expand, animation: animation)
         }
     }
 }
